@@ -24,6 +24,16 @@ public class Vetor {
             throw new Exception("O vetor já está cheio, não é possível adicionar mais elementos");
         }
     }
+    
+    //Método para buscar uma posição no vetor
+    public String buscar(int posicao) throws Exception {
+        
+        if(posicao >= 0 && posicao > tamanho) {
+            throw new IllegalArgumentException("Posição Inválida");
+        }
+        
+        return this.elementos[posicao];
+    }
 
     //Metodo para definir o tamanho do vetor
     public int tamanho() {
