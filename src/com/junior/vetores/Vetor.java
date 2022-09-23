@@ -34,6 +34,17 @@ public class Vetor {
         
         return this.elementos[posicao];
     }
+    
+    //Método para verificar se existe um elemento no vetor
+    public int verificar(String elemento) {
+        for(int i=0; i<this.tamanho; i++) {
+            if(this.elementos[i].equalsIgnoreCase(elemento)) {
+                return i;
+            }
+        }
+        
+        return -1;
+    }
 
     //Metodo para definir o tamanho do vetor
     public int tamanho() {
